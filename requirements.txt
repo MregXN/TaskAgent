@@ -1,0 +1,6 @@
+python-calendarific
+openai
+azure-identity
+requests
+beautifulsoup4
+termcolor
