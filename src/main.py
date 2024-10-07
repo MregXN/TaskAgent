@@ -92,13 +92,13 @@ if __name__ == "__main__":
     response = agent_chat(pm_memory.conversation, tool_list=tools, tool_choice="auto")
     pm_memory.add_message("assistant", response.choices[0].message.content)
 
-    pm_memory.add_message("user", TASK_DESCRIPTION+"Can you draft a work plan for me?")
+    pm_memory.add_message("user", TASK_DESCRIPTION+"Can you search the details and draft a work plan for me?")
     response = agent_chat(pm_memory.conversation, tool_list=tools, tool_choice="auto")
     pm_memory.add_message("assistant", response.choices[0].message.content)
 
     pm_memory.add_message(
         "user",
-        "Now summarize all the past conversation and generate the final plan for me. You need to include the tasks breakdown, estimated time, and daily tasks assignment and their date. You don't need to assign tasks in non-working days. Make sure you have used the `get_workdys` function to get the working days information.",
+        "Now summarize all the past conversation and generate the final plan for me. You need to include the tasks breakdown, estimated time, and daily tasks assignment and their date. You don't need to assign tasks in non-working days. Make sure you have used working days information from get_workdays function in your plan.",
     )
     response = agent_chat(pm_memory.conversation, tool_list=tools, tool_choice="auto")
     pm_memory.add_message("assistant", response.choices[0].message.content)
@@ -121,4 +121,4 @@ if __name__ == "__main__":
     pm_memory.add_message("user", f"I have some comments to the plan, can you revise it accordingly? Comments:{review_comment}")
     response = agent_chat(pm_memory.conversation, tool_list=tools, tool_choice ="auto")
     pm_memory.add_message("assistant", response.choices[0].message.content)
-    pm_memory.display_last_message()
+    pm_memory.display_full_conversation()
