@@ -1,5 +1,5 @@
 # Task Agent
-Homework of FY25 APRD AI School China.
+Homework of AI School 2024.
 
 Task Agent is designed to streamline your development workflow by automating the task breakdown and scheduling process. Here's what it does:
 
@@ -17,8 +17,8 @@ With this agent, you can ensure a more organized and efficient approach to manag
 ## Usage
 
 ### Install requirements
-```
-pip install -r requirements.txt
+```bahs
+$ pip install -r requirements.txt
 ```
 
 ### Fill in Configuration
@@ -46,13 +46,13 @@ COUNTRY = "CN"
 ```
 Rename the file to `env.py` and copy it to the `src` folder.
 ```bash
-cp env_template.py src/eny.py
+$ cp env_template.py src/eny.py
 ```
 
 ### Run
 
 ```bash
-py src/main.py
+$ py src/main.py
 ```
 
 Output will be like:
