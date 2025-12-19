@@ -1,5 +1,5 @@
 # Task Agent
-Homework of AI School 2024.
+Homework of Microsoft AI School 2024.
 
 Task Agent is designed to streamline your development workflow by automating the task breakdown and scheduling process. Here's what it does:
 
